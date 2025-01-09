@@ -80,3 +80,22 @@ fun findLargestNum(array: IntArray):Int{
     return maximum
 }
 ```
+# 5.Check if a number is prime manually.
+
+```kotlin
+fun main() {
+    val number = 23
+    println(isPrime(number))
+}
+
+fun isPrime(number: Int): Boolean{
+    
+    if (number<=1) return false
+    
+    for (i in 2 until number){
+        
+        if (number % i == 0) return false
+    }
+    return true
+}
+```
