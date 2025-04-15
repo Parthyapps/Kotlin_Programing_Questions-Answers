@@ -41,6 +41,28 @@ Kotlin_Programing_Questions &amp; Answers
              
              return first
          }
+
+// find second largest number
+
+fun main() {
+    val array = intArrayOf(3,1,34,12,43)
+    val result = secondLargestNum (array)
+    println(result)
+}
+
+fun secondLargestNum (array: IntArray) : Int{
+    var first = Int.MIN_VALUE
+    var second = Int.MIN_VALUE
+    println(first)
+    println(second)
+    for (num in array){
+        if (num > first){
+            second = first
+            first = num
+        }
+    }
+    return first
+}
    ```
 
 # 3.Check if a string is a palindrome without shortcuts.
