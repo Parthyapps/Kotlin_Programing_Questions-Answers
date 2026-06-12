@@ -220,4 +220,33 @@ fun main() {
 }
 ```
 
+# 11. Two Sum 
+```kotlin
+fun twoSum(nums: IntArray, target: Int): IntArray {
+
+    for (i in 0 until nums.size) {
+
+        for (j in i + 1 until nums.size) {
+
+            if (nums[i] + nums[j] == target) {
+                return intArrayOf(i, j)
+            }
+        }
+    }
+
+    return intArrayOf(-1, -1)
+}
+
+fun main() {
+
+    val nums = intArrayOf(2, 7, 11, 15)
+    val target = 9
+
+    val result = twoSum(nums, target)
+
+    println(result[0])
+    println(result[1])
+}
+```
+
 
